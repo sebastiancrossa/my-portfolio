@@ -6,6 +6,7 @@
 }
 
 #intro {
+    font-size: 1.3rem;
     font-family: "Merriweather";
     text-align: left;
     padding: 1rem 0 1rem 0;
@@ -20,4 +21,21 @@
     background-position-y: 110%;
     background-image: linear-gradient( white 50%, gold 50%);
     background-size: auto 175%;
+}
+
+/*  Thank you Shelaine Roustio for the NatGeo
+    highlighter effect!
+    https://www.bypeople.com/pure-css-text-highlight-effect/
+*/
+a, a:link {
+    color: black;
+  text-decoration: none;
+  background-position-y: -0%;
+  background-image: linear-gradient( white 50%, gold 50%);
+  transition: background 500ms ease;
+  background-size: auto 175%;
+}
+
+a:hover {
+    background-position-y: 100%;
 }
