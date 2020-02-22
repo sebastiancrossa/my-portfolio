@@ -6,6 +6,9 @@
 }
 
 #intro {
+    display: flex;
+    justify-content: space-between;
+
     font-size: 1.3rem;
     font-family: "Merriweather";
     text-align: left;
@@ -14,6 +17,15 @@
 
 #greeting-container {
   margin-top: 20px;
+}
+
+#intro-img {
+    height: 30rem;
+    width: 25rem;
+
+    -webkit-box-shadow: 14px 14px 0px 0px rgba(255,242,0,1);
+-moz-box-shadow: 14px 14px 0px 0px rgba(255,242,0,1);
+box-shadow: 14px 14px 0px 0px rgba(255,242,0,1);
 }
 
 .highlight {
@@ -25,7 +37,7 @@
 
 /*  Thank you Shelaine Roustio for the NatGeo
     highlighter effect!
-    https://www.bypeople.com/pure-css-text-highlight-effect/
+    Source: https://www.bypeople.com/pure-css-text-highlight-effect/
 */
 a, a:link {
     color: black;
