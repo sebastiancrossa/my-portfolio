@@ -1,9 +1,23 @@
 #content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+  margin: 0 auto;
+    max-width: 80%;
+
+  background-color: #FDFDFD;
+}
+
+#intro {
+    font-family: "Merriweather";
+    text-align: left;
+    padding: 1rem 0 1rem 0;
 }
 
 #greeting-container {
   margin-top: 20px;
+}
+
+.highlight {
+    text-decoration: none;
+    background-position-y: 110%;
+    background-image: linear-gradient( white 50%, gold 50%);
+    background-size: auto 175%;
 }
