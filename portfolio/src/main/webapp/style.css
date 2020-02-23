@@ -1,6 +1,8 @@
 #content {
   margin: 0 auto;
-    max-width: 80%;
+  max-width: 80%;
+
+  font-family: "Merriweather";
 
   background-color: #FDFDFD;
 }
@@ -9,10 +11,17 @@
     display: flex;
     justify-content: space-between;
 
+    margin-bottom: 4rem;
+
     font-size: 1.3rem;
     font-family: "Merriweather";
     text-align: left;
     padding: 1rem 0 1rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 #greeting-container {
@@ -21,11 +30,28 @@
 
 #intro-img {
     height: 30rem;
-    width: 25rem;
+    width: 28rem;
 
-    -webkit-box-shadow: 14px 14px 0px 0px rgba(255,242,0,1);
--moz-box-shadow: 14px 14px 0px 0px rgba(255,242,0,1);
-box-shadow: 14px 14px 0px 0px rgba(255,242,0,1);
+    /* Making our image non selectable by
+       users */
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;  
+
+    -webkit-box-shadow: 14px 14px 0px 0px rgba(255,216,2,1);
+    -moz-box-shadow: 14px 14px 0px 0px rgba(255,216,2,1);
+    box-shadow: 14px 14px 0px 0px rgba(255,216,2,1);
+}
+
+#content #projects .projects-item-container {
+    padding: 2rem;
+
+    background-color: pink;
+    border-radius: 5px;
+
+    -webkit-box-shadow: 0px 0px 80px -15px rgba(136, 186, 255, 0.34);
+    -moz-box-shadow: 0px 0px 80px -15px rgba(136, 186, 255, 0.34);
+    box-shadow: 0px 0px 80px -15px rgba(136, 186, 255, 0.34);
 }
 
 .highlight {
