@@ -24,7 +24,9 @@ body {
 }
 
 #aboutme {
-    margin-bottom: 2rem;
+    margin: 0 auto 4rem auto;
+
+    max-width: 35rem;
 }
 
 .section-title {
