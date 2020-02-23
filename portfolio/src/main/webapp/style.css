@@ -1,3 +1,7 @@
+body {
+    padding: 2rem;
+} 
+
 #content {
   margin: 0 auto;
   max-width: 80%;
@@ -19,9 +23,15 @@
     padding: 1rem 0 1rem 0;
 }
 
+#aboutme {
+    margin-bottom: 2rem;
+}
+
 .section-title {
     text-align: center;
     font-size: 1.2rem;
+
+    margin-bottom: 1.3rem;
 }
 
 #greeting-container {
