@@ -1,9 +1,91 @@
+body {
+    padding: 2rem;
+} 
+
 #content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+  margin: 0 auto;
+  max-width: 80%;
+
+  font-family: "Merriweather";
+
+  background-color: #FDFDFD;
+}
+
+#intro {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 4rem;
+
+    font-size: 1.3rem;
+    font-family: "Merriweather";
+    text-align: left;
+    padding: 1rem 0 1rem 0;
+}
+
+#aboutme {
+    margin: 0 auto 4rem auto;
+
+    max-width: 35rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.2rem;
+
+    margin-bottom: 1.3rem;
 }
 
 #greeting-container {
   margin-top: 20px;
+}
+
+#intro-img {
+    height: 30rem;
+    width: 28rem;
+
+    /* Making our image non selectable by
+       users */
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;  
+
+    -webkit-box-shadow: 14px 14px 0px 0px rgba(255,216,2,1);
+    -moz-box-shadow: 14px 14px 0px 0px rgba(255,216,2,1);
+    box-shadow: 14px 14px 0px 0px rgba(255,216,2,1);
+}
+
+#content #projects .projects-item-container {
+    padding: 2rem;
+
+    background-color: pink;
+    border-radius: 5px;
+
+    -webkit-box-shadow: 0px 0px 80px -15px rgba(136, 186, 255, 0.34);
+    -moz-box-shadow: 0px 0px 80px -15px rgba(136, 186, 255, 0.34);
+    box-shadow: 0px 0px 80px -15px rgba(136, 186, 255, 0.34);
+}
+
+.highlight {
+    text-decoration: none;
+    background-position-y: 110%;
+    background-image: linear-gradient( white 50%, gold 50%);
+    background-size: auto 175%;
+}
+
+/*  Thank you Shelaine Roustio for the NatGeo
+    highlighter effect!
+    Source: https://www.bypeople.com/pure-css-text-highlight-effect/
+*/
+a, a:link {
+    color: black;
+  text-decoration: none;
+  background-position-y: -0%;
+  background-image: linear-gradient( white 50%, gold 50%);
+  transition: background 500ms ease;
+  background-size: auto 175%;
+}
+
+a:hover {
+    background-position-y: 100%;
 }

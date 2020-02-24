@@ -2,17 +2,85 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Sebastian Crossa</title>
+
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+
     <script src="script.js"></script>
   </head>
   <body>
     <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+
+        <section id="intro">
+            <div>
+                <h1 class="header" id="intro-title">
+                    Hello! I'm <span class="highlight">Sebastian Crossa</span>,
+                    <br />
+                    a Computer Science student 
+                    <br />
+                    and JavaScript lover living
+                    <br >
+                    in Guadalajara, México.
+                </h1>
+
+                <h2>
+                    Co-founder at <a href="https://kisana.co" target="_blank">Kisana</a>, a market
+                    <br />
+                    place for event spaces.
+                </h2>
+
+                <p>You can find me through <a href="https://mx.linkedin.com/in/sebastiancrossa" target="_blank">LinkedIn</a>
+                , <a href="https://twitter.com/sebastiancrossa" target="_blank">Twitter</a>
+                <br /> & <a href="https://github.com/sebastiancrossa" target="_blank">Github</a>
+                </p>
+            </div>
+
+            <img id="intro-img" src="/images/perfil.jpg" />
+        </section>
+
+        <section id="aboutme">
+            <h2 class="section-title">About me</h2>
+
+            <p style="text-align: center;">Second year Computer Science student passionate about finding and building solutions to
+                problems through technology, with experience in full stack web development, software engineering
+                and design.</p>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="projects-items" style="display: grid; grid-template-columns: repeat(3, auto); grid-column-gap: 1.5rem;">
+                <div class="projects-item-container" style="padding: 1rem; border-radius: 5px; box-shadow: 0px 0px 80px -15px rgba(136, 186, 255, 0.34);">
+                    <h3 class="projects-item-title">
+                        <a href="https://kisana.co" target="_blank">Kisana</a>
+                    </h3>
+                    <p class="projects-item-desc">
+                        Online marketplace for listing and finding a space for a party, meeting or wedding.
+                    </p>
+                </div>
+
+                <div class="projects-item-container" style="padding: 1rem; border-radius: 5px; box-shadow: 0px 0px 80px -15px rgba(136, 186, 255, 0.34);">
+                    <h3 class="projects-item-title">
+                        <a href="https://github.com/sebastiancrossa/visionapp" target="_blank">Vision</a>
+                    </h3>
+                    <p class="projects-item-desc">
+                        Web and mobile app focused on detecting potential skin melanoma
+                        by comparing an image of the skin to a trained model.
+                    </p>
+                </div>
+
+                <div class="projects-item-container" style="padding: 1rem; border-radius: 5px; box-shadow: 0px 0px 80px -15px rgba(136, 186, 255, 0.34);">
+                    <h3 class="projects-item-title">
+                        <a href="https://github.com/sebastiancrossa/kredito" target="_blank">Kredito</a>
+                    </h3>
+                    <p class="projects-item-desc">
+                        Web app built for creating a better user experience when it comes to filling up a form for a loan.
+                    </p>
+                </div>
+            </div>
+        </section>
+
     </div>
   </body>
 </html>
