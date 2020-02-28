@@ -26,3 +26,16 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+/**
+ * Fetches the data from our Java servlet 
+ */
+const getData = async () => {
+    const res = await fetch('/data');
+    const data = await res.text();
+
+    document.getElementById('fetch-container').innerText = data;
+}
+
+// Gets called automatically
+getData();
