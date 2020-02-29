@@ -37,5 +37,4 @@ const getData = async () => {
     document.getElementById('fetch-container').innerText = data;
 }
 
-// Gets called automatically
 getData();
