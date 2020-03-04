@@ -28,14 +28,16 @@ function addRandomGreeting() {
 }
 
 /**
- * Fetches the data from our Java servlet 
+ * Fetches the data from our Java servlet and parses the received JSON
  */
 const getData = async () => {
     const res = await fetch('/data');
     const data = await res.text();
 
+    // Parsing our fetched JSON so it can be mapped through later on
+    const parsedData = JSON.parse(data); 
+
     document.getElementById('fetch-container').innerText = data;
 }
 
-// Gets called automatically
 getData();
