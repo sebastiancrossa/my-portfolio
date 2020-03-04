@@ -20,6 +20,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.cloud.translate.Translate;
+import com.google.cloud.translate.TranslateOptions;
+import com.google.cloud.translate.Translation;
+
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
@@ -36,6 +40,10 @@ import java.util.List;
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
 
+  Translate translate = TranslateOptions.getDefaultInstance().getService();
+  Translation translation;
+  String translatedText;
+
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     Query query = new Query("Comment").addSort("timestamp", SortDirection.DESCENDING);
@@ -44,18 +52,23 @@ public class DataServlet extends HttpServlet {
     PreparedQuery results = datastore.prepare(query);
 
     List<Comment> comments = new ArrayList<>();
+    
     for (Entity entity : results.asIterable()) {
         long id = entity.getKey().getId();
         String text = (String) entity.getProperty("text");
         long timestamp = (long) entity.getProperty("timestamp");
 
-        Comment comment = new Comment(id, text, timestamp);
+        translation = translate.translate(text, Translate.TranslateOption.targetLanguage("es"));
+        translatedText = translation.getTranslatedText();
+
+        Comment comment = new Comment(id, translatedText, timestamp);
         comments.add(comment);
     }
 
     Gson gson = new Gson();
     String json = gson.toJson(comments);
 
+    response.setCharacterEncoding("UTF-8");
     response.setContentType("application/json;");
     response.getWriter().println(json);
   }
