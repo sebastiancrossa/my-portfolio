@@ -30,6 +30,9 @@ const getComments = async () => {
         commentsListItem = document.createElement('li');
         commentsListItem.innerHTML = comment.text;
 
+        // Giving each comment item a class so we can style them out
+        commentsListItem.setAttribute("class", "comment-item");
+
         commentsList.appendChild(commentsListItem);
     });
 }

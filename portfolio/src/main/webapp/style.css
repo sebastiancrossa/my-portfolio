@@ -76,6 +76,38 @@ body {
     background-size: auto 175%;
 }
 
+/* --- COMMENTS --- */
+#comments-container {
+    margin: 0;
+    padding: 0;
+}
+
+#comments-container > :first-child {
+    margin-top: 2.5rem !important;
+}
+
+.comment-item {
+    list-style: none;
+
+    margin-top: 1rem;
+    padding: 2rem;
+    width: 100%;
+
+    border-radius: 8px;
+
+    transition: all .2s ease-in-out;
+
+    -webkit-box-shadow: 0px 0px 80px -15px rgba(136, 186, 255, 0.34);
+    -moz-box-shadow: 0px 0px 80px -15px rgba(136, 186, 255, 0.34);
+    box-shadow: 0px 0px 80px -15px rgba(136, 186, 255, 0.34);
+}
+
+.comment-item:hover {
+    transform: scale(1.05);
+}
+
+/* --- --- */
+
 /*  Thank you Shelaine Roustio for the NatGeo
     highlighter effect!
     Source: https://www.bypeople.com/pure-css-text-highlight-effect/
