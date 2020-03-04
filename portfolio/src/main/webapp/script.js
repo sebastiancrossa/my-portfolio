@@ -13,25 +13,11 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
- */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
-
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
-}
-
-/**
  * Fetches the data from our Java servlet and parses the received JSON
  */
 const getComments = async () => {
-    console.log("called");
+    let commentsList = document.getElementById('comments-container');
+    let commentsListItem;
 
     const res = await fetch('/data');
     const data = await res.text();
@@ -39,5 +25,11 @@ const getComments = async () => {
     // Parsing our fetched JSON so it can be mapped through later on
     const parsedData = JSON.parse(data); 
 
-    document.getElementById('comments-container').innerText = data;
+    // Creating a single instance of an <li> component based on the comments
+    parsedData.map(comment => {
+        commentsListItem = document.createElement('li');
+        commentsListItem.innerHTML = comment.text;
+
+        commentsList.appendChild(commentsListItem);
+    });
 }
